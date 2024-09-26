@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loader_overlay/loader_overlay.dart';
-import 'package:onix_flutter_bloc/src/arch/bloc/base_cubit/base_cubit.dart';
-import 'package:onix_flutter_bloc/src/arch/bloc/bloc_typedefs.dart';
-import 'package:onix_flutter_bloc/src/arch/bloc/mixins/bloc_builders_mixin.dart';
-import 'package:onix_flutter_bloc/src/arch/bloc/stream_listener.dart';
-import 'package:onix_flutter_bloc/src/arch/domain/entity/progress_state/progress_state.dart';
+import 'package:onix_flutter_bloc/src/bloc/base_cubit/base_cubit.dart';
+import 'package:onix_flutter_bloc/src/bloc/bloc_typedefs.dart';
+import 'package:onix_flutter_bloc/src/bloc/mixins/bloc_builders_mixin.dart';
+import 'package:onix_flutter_bloc/src/bloc/stream_listener.dart';
+import 'package:onix_flutter_bloc/src/domain/entity/progress_state/progress_state.dart';
 import 'package:onix_flutter_core_models/onix_flutter_core_models.dart';
 
 abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,

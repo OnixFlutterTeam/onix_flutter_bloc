@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:onix_flutter_bloc/src/arch/bloc/bloc_typedefs.dart';
+import 'package:onix_flutter_bloc/src/bloc/bloc_typedefs.dart';
 
 mixin class BlocBuildersMixin<B extends StateStreamable<S>, S, SR> {
   Widget blocConsumer({
