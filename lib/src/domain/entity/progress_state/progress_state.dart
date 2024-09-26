@@ -1,4 +1,4 @@
-///To add custom progress data in BLoC extends from this class
+/// To add custom progress data in BLoC extends from this class
 sealed class BaseProgressState {
   const BaseProgressState();
 }
