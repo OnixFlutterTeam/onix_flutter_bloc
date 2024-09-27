@@ -1,6 +1,6 @@
 name: onix_flutter_bloc
 description: "Onix Flutter BLoC"
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/OnixFlutterTeam/onix-flutter-bloc
 
 environment:

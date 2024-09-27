@@ -449,7 +449,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   onix_flutter_core_models:
     dependency: "direct main"
     description:
