@@ -42,6 +42,9 @@ abstract class BaseState<S, B extends BaseBloc<dynamic, S, SR>, SR,
     if (_bloc != null) {
       _bloc?.dispose();
     }
+    if (context.mounted) {
+      context.loaderOverlay.hide();
+    }
     super.dispose();
   }
 

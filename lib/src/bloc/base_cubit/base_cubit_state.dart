@@ -42,6 +42,9 @@ abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,
     if (_cubit != null) {
       _cubit?.dispose();
     }
+    if (context.mounted) {
+      context.loaderOverlay.hide();
+    }
     super.dispose();
   }
 
