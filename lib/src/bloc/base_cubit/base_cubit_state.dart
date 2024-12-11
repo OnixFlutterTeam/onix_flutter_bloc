@@ -9,13 +9,20 @@ import 'package:onix_flutter_core_models/onix_flutter_core_models.dart';
 
 abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,
         W extends StatefulWidget> extends State<W>
-    with BlocBuildersMixin<C, S, SR> {
+    with BlocBuildersMixin<C, S, SR>, AutomaticKeepAliveClientMixin {
   bool _listenersAttached = false;
   bool lazyCubit = false;
   C? _cubit;
 
   @override
+  bool get wantKeepAlive => false;
+
+  @override
   Widget build(BuildContext context) {
+    if (wantKeepAlive) {
+      super.build(context);
+    }
+
     return BlocProvider<C>(
       create: (context) {
         final cubit = createCubit();

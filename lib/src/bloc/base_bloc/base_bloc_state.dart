@@ -9,13 +9,20 @@ import 'package:onix_flutter_core_models/onix_flutter_core_models.dart';
 
 abstract class BaseState<S, B extends BaseBloc<dynamic, S, SR>, SR,
         W extends StatefulWidget> extends State<W>
-    with BlocBuildersMixin<B, S, SR> {
+    with BlocBuildersMixin<B, S, SR>, AutomaticKeepAliveClientMixin {
   bool _listenersAttached = false;
   bool lazyBloc = false;
   B? _bloc;
 
   @override
+  bool get wantKeepAlive => false;
+
+  @override
   Widget build(BuildContext context) {
+    if (wantKeepAlive) {
+      super.build(context);
+    }
+
     return BlocProvider<B>(
       create: (context) {
         final bloc = createBloc();
@@ -82,7 +89,7 @@ abstract class BaseState<S, B extends BaseBloc<dynamic, S, SR>, SR,
     }
   }
 
-  // ignore: no-empty-block
+// ignore: no-empty-block
   void initParams(BuildContext context) {}
 
   Widget buildWidget(BuildContext context);
