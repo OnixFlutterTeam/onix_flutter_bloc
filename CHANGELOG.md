@@ -1,3 +1,7 @@
+## 0.0.5-beta.1 
+
+* Switched to beta core components
+
 ## 0.0.4
 
 * Fixed issue when screen closed but progress visible
