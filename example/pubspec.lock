@@ -454,10 +454,10 @@ packages:
     dependency: "direct main"
     description:
       name: onix_flutter_core_models
-      sha256: "6e247447fb877221d4a8c3512da491db9da86af746cf6cfa91c9d9eaa79b7588"
+      sha256: "625448f2c48597b08e506062239051c8427aa1c52aa32f36b484501e59e15396"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.3-beta.1"
   package_config:
     dependency: transitive
     description:

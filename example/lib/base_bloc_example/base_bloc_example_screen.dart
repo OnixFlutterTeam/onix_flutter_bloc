@@ -47,7 +47,7 @@ class _BaseBlocExampleScreenState extends BaseState<BaseBlocExampleScreenState,
   @override
   void onFailure(
     BuildContext context,
-    Failure failure,
+    Exception failure,
   ) {
     debugPrint(failure.toString());
   }

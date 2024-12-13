@@ -68,7 +68,7 @@ abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,
 
   void onCubitCreated(BuildContext context, C cubit) {}
 
-  void onFailure(BuildContext context, Failure failure) {}
+  void onFailure(BuildContext context, Exception failure) {}
 
   void onSR(BuildContext context, SR sr) {}
 

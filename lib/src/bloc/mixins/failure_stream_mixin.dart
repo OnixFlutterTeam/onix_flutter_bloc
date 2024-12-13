@@ -1,14 +1,12 @@
 import 'dart:async';
 
-import 'package:onix_flutter_core_models/onix_flutter_core_models.dart';
-
 mixin class FailureStreamMixin {
-  final StreamController<Failure> _errorStreamController =
-      StreamController<Failure>.broadcast();
+  final StreamController<Exception> _errorStreamController =
+      StreamController<Exception>.broadcast();
 
-  Stream<Failure> get failureStream => _errorStreamController.stream;
+  Stream<Exception> get failureStream => _errorStreamController.stream;
 
-  void onFailure(Failure failure) {
+  void onFailure(Exception failure) {
     if (!_errorStreamController.isClosed) {
       _errorStreamController.add(failure);
     }

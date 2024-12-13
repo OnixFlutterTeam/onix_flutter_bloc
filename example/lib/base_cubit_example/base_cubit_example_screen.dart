@@ -95,7 +95,7 @@ class _BaseCubitExampleScreenState extends BaseCubitState<
   @override
   void onFailure(
     BuildContext context,
-    Failure failure,
+    Exception failure,
   ) {
     debugPrint(failure.toString());
   }

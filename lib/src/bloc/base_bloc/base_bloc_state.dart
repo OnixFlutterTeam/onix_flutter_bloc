@@ -68,7 +68,7 @@ abstract class BaseState<S, B extends BaseBloc<dynamic, S, SR>, SR,
 
   void onBlocCreated(BuildContext context, B bloc) {}
 
-  void onFailure(BuildContext context, Failure failure) {}
+  void onFailure(BuildContext context, Exception failure) {}
 
   void onSR(BuildContext context, SR sr) {}
 
