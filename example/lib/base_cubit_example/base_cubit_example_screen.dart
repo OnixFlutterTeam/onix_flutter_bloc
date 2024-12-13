@@ -52,12 +52,14 @@ class _BaseCubitExampleScreenState extends BaseCubitState<
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            heroTag: null,
             onPressed: () => cubitOf(context).increment(),
             tooltip: 'Increment',
             child: const Icon(Icons.add),
           ),
           const SizedBox(width: 16),
           FloatingActionButton(
+            heroTag: null,
             onPressed: () => cubitOf(context)
                 .addSr(BaseCubitExampleScreenSRShowDialog('Hello')),
             tooltip: 'Show dialog',

@@ -89,6 +89,7 @@ class _BaseBlocExampleScreenState extends BaseState<BaseBlocExampleScreenState,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            heroTag: null,
             onPressed: () =>
                 blocOf(context).add(BaseBlocExampleScreenEventOnIncrement()),
             tooltip: 'Increment',
@@ -96,6 +97,7 @@ class _BaseBlocExampleScreenState extends BaseState<BaseBlocExampleScreenState,
           ),
           const SizedBox(width: 16),
           FloatingActionButton(
+            heroTag: null,
             onPressed: () => blocOf(context)
                 .addSr(BaseBlocExampleScreenSRShowDialog('Hello')),
             tooltip: 'Show dialog',
