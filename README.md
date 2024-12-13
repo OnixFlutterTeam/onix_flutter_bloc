@@ -67,7 +67,7 @@ It is also possible to override the onFailure method to handle failure objects:
 void onFailure(
   BuildContext context,
   ExampleBloc bloc,
-  Failure failure,
+  Exception failure,
 ) {
   ...
 }
