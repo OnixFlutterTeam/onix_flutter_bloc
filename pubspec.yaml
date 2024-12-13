@@ -1,6 +1,6 @@
 name: onix_flutter_bloc
 description: "Onix Flutter BLoC"
-version: 0.0.4
+version: 0.0.5-beta.1
 repository: https://github.com/OnixFlutterTeam/onix-flutter-bloc
 
 environment:
@@ -11,5 +11,5 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
-  loader_overlay: ^4.0.2+1
+  loader_overlay: ^4.0.3
   onix_flutter_core_models: ^0.0.3-beta.1
