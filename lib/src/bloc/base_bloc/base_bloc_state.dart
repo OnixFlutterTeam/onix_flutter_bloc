@@ -20,16 +20,16 @@ abstract class BaseState<S, B extends BaseBloc<dynamic, S, SR>, SR,
       create: (context) {
         final bloc = createBloc();
         _bloc = bloc;
+        if (!_listenersAttached) {
+          _listenersAttached = true;
+          _attachListeners(context);
+        }
         onBlocCreated(context, bloc);
         return bloc;
       },
       lazy: lazyBloc,
       child: Builder(
         builder: (context) {
-          if (!_listenersAttached) {
-            _listenersAttached = true;
-            _attachListeners(context);
-          }
           initParams(context);
           return buildWidget(context);
         },

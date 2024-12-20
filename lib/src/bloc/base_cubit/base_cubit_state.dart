@@ -19,17 +19,17 @@ abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,
     return BlocProvider<C>(
       create: (context) {
         final cubit = createCubit();
-        onCubitCreated(context, cubit);
         _cubit = cubit;
+        if (!_listenersAttached) {
+          _listenersAttached = true;
+          _attachListeners(context);
+        }
+        onCubitCreated(context, cubit);
         return cubit;
       },
       lazy: lazyCubit,
       child: Builder(
         builder: (context) {
-          if (!_listenersAttached) {
-            _listenersAttached = true;
-            _attachListeners(context);
-          }
           initParams(context);
           return buildWidget(context);
         },
