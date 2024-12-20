@@ -20,16 +20,18 @@ abstract class BaseCubitState<S, C extends BaseCubit<S, SR>, SR,
       create: (context) {
         final cubit = createCubit();
         _cubit = cubit;
-        if (!_listenersAttached) {
-          _listenersAttached = true;
-          _attachListeners(context);
-        }
-        onCubitCreated(context, cubit);
         return cubit;
       },
       lazy: lazyCubit,
       child: Builder(
         builder: (context) {
+          if (_cubit != null) {
+            if (!_listenersAttached) {
+              _listenersAttached = true;
+              _attachListeners(context);
+            }
+            onCubitCreated(context, _cubit!);
+          }
           initParams(context);
           return buildWidget(context);
         },
